@@ -41,7 +41,16 @@ public class ErrorCheck{
     //     System.out.println("Hi");
     // }
     // }
-
+    double salaryFloat=127;
+    double decimal =salaryFloat*100;
+    decimal=decimal%100;
+    if(decimal>=50)
+			{
+            	salaryFloat+=1;
+            	System.out.println((int)salaryFloat);
+       		 }
+       		 else System.out.println((int)salaryFloat);
     
 
+}
 }
