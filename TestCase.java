@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class TestCase {
     public static void main(String[] args){
         // int i;
@@ -20,11 +22,13 @@ public class TestCase {
 
         
             // 
-            String a ="abcd";
-String b="abcda";
-System.out.println(b.compareTo(a));
+//             String a ="abcd";
+// String b="abcda";
+// System.out.println(b.compareTo(a));
 
-        
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        System.out.println(str);
 
     }
 }
