@@ -19,14 +19,11 @@ public class TestCase {
         // System.out.print(arr[0]+ " " + arr[1] + " " + arr[2] + " " + arr[3] + " " +arr[4]);
 
         
-            System.out.println("Hello, World!");
-            for(int i=0;i<4;i++){
-                int count = i+1;
-                for(int j=0;j<4;j++){
-                    System.out.print(count++);
-                }
-                System.out.println();
-            }
+            // 
+            String a ="abcd";
+String b="abcda";
+System.out.println(b.compareTo(a));
+
         
 
     }
