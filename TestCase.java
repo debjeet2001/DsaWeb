@@ -26,9 +26,14 @@ public class TestCase {
 // String b="abcda";
 // System.out.println(b.compareTo(a));
 
-        Scanner s = new Scanner(System.in);
-        String str = s.nextLine();
-        System.out.println(str);
+// String str1="abc";
+// String str2="";
+// System.out.println(str2.contains(str1));
+    String str="debjeet";
+    str.
+ 
+
+
 
     }
 }
