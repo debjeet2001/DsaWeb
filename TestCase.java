@@ -1,40 +1,45 @@
 import java.util.*;
 
 public class TestCase {
+    public static String minLengthWord(String input){
+		
+		// Write your code here
+		String str = "";
+		int small=Integer.MAX_VALUE;
+		int count = 0;
+		int indexSpace=-1;
+		int indexStart=-1;
+		for(int i=0;i<input.length();i++){
+			if(input.charAt(i)!=' ')count++;
+			if(input.charAt(i)==' '){
+				indexSpace = i;
+				if(count<small){
+					small=count;
+					indexStart = i;
+					count=0;
+				}
+			}
+		}
+		count =0;
+		for(int i = indexSpace+1;i<input.length();i++){
+			count++;
+		}
+		if(count<small){
+			small=count;
+		}
+	
+		for(int i = indexStart-small; i<i+small;i++ ){
+			str+=input.charAt(i);
+		} 
+
+		return str;
+
+	}
     public static void main(String[] args){
-        // int i;
-        // for(i=1;i>0;i++)
-        // {
-    
-        // }
-        // System.out.print(i);
-
-        // int[] arr = new int[5];
-        // arr[0]=1;
-        // arr[1]=2;
-        // arr[2]=3;
-        // arr[3]=4;
-        // arr[4]=5;
-        // System.out.print(arr[0]+ " " + arr[1] + " " + arr[2] + " " + arr[3] + " " +arr[4]);
-        // arr = new int[6];
-        // System.out.println();
-        // System.out.print(arr[0]+ " " + arr[1] + " " + arr[2] + " " + arr[3] + " " +arr[4]);
-
-        
-            // 
-//             String a ="abcd";
-// String b="abcda";
-// System.out.println(b.compareTo(a));
-
-// String str1="abc";
-// String str2="";
-// System.out.println(str2.contains(str1));
-    String str="debjeet";
-    str.
- 
-
-
-
+        String str1 = new String ("I love coding"); 
+        System.out.print(minLengthWord(str1));
+      
+   
     }
 }
 
