@@ -1,0 +1,1 @@
+str+=c and str=str+c //are slightly different intenally.
