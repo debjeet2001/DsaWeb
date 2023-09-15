@@ -2,6 +2,32 @@ package dsa.TREES;
 
 
 public class BinaryTreeUse {
+
+    public static void depthAtK(BinaryTreeNode<Integer> root, int k){
+        if(root==null)return;
+        if(k==0)System.out.println(root.data);
+        depthAtK(root.left, k-1);
+        depthAtK(root.right, k-1);
+    } 
+
+
+    public static int numLeafNodes(BinaryTreeNode<Integer> root){
+        if(root==null)return 0;
+        int left = numLeafNodes(root.left);
+        int right = numLeafNodes(root.right);
+        int count =0;
+        if(root.left==null && root.right==null)count++;
+        return count+left+right;
+    }
+
+    public static int largestData(BinaryTreeNode<Integer> root){
+        if(root == null) return -1;
+        int leftLargest = largestData(root.left);
+        int rightLargest = largestData(root.right);
+        return Math.max(root.data, Math.max(leftLargest,rightLargest));
+        
+    }
+
     public static int sumNodes(BinaryTreeNode<Integer> root){
         if(root == null)return 0;
         int leftSum = sumNodes(root.left);
@@ -43,7 +69,7 @@ public class BinaryTreeUse {
         root.left = rootLeft;
         BinaryTreeNode<Integer>  rootRight = new BinaryTreeNode<Integer>(3);
         root.right = rootRight;
-        System.out.println(sumNodes(root));
+        depthAtK(root, 1);
     
 }
 
