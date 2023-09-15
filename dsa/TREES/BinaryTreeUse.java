@@ -2,6 +2,12 @@ package dsa.TREES;
 
 
 public class BinaryTreeUse {
+    public static int sumNodes(BinaryTreeNode<Integer> root){
+        if(root == null)return 0;
+        int leftSum = sumNodes(root.left);
+        int rightSum = sumNodes(root.right);
+        return leftSum + rightSum + root.data;
+    }
 
     public static int numNodes(BinaryTreeNode<Integer> root){
         if(root == null)return 0;
@@ -11,7 +17,7 @@ public class BinaryTreeUse {
         return 1+leftNodeCount+rightNodeCount; 
     }
 
-    public static void printTree2(BinaryTreeNode<Integer> root){
+    public static void printTreeDetail(BinaryTreeNode<Integer> root){
         if(root == null)return;
         System.out.print(root.data + ":");
         if(root.left != null ){
@@ -21,8 +27,8 @@ public class BinaryTreeUse {
             System.out.print("R:"+root.right.data);
         }
         System.out.println();
-        printTree2(root.left);
-        printTree2(root.right);
+        printTreeDetail(root.left);
+        printTreeDetail(root.right);
     }
 
     public static void printTree(BinaryTreeNode<Integer> root){
@@ -37,7 +43,7 @@ public class BinaryTreeUse {
         root.left = rootLeft;
         BinaryTreeNode<Integer>  rootRight = new BinaryTreeNode<Integer>(3);
         root.right = rootRight;
-        System.out.println(numNodes(root));
+        System.out.println(sumNodes(root));
     
 }
 
