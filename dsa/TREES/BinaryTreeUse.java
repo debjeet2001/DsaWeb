@@ -3,6 +3,14 @@ package dsa.TREES;
 
 public class BinaryTreeUse {
 
+    public static int numNodes(BinaryTreeNode<Integer> root){
+        if(root == null)return 0;
+
+        int leftNodeCount = numNodes(root.left);
+        int rightNodeCount = numNodes(root.right);
+        return 1+leftNodeCount+rightNodeCount; 
+    }
+
     public static void printTree2(BinaryTreeNode<Integer> root){
         if(root == null)return;
         System.out.print(root.data + ":");
@@ -29,7 +37,7 @@ public class BinaryTreeUse {
         root.left = rootLeft;
         BinaryTreeNode<Integer>  rootRight = new BinaryTreeNode<Integer>(3);
         root.right = rootRight;
-        printTree2(root);
+        System.out.println(numNodes(root));
     
 }
 
