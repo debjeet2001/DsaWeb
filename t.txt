@@ -1,2 +1,2 @@
 str+=c and str=str+c //are slightly different intenally.
-while dealing with 2d arrays consider if(arr.length>0) case. i.e check if 2D array is empty.. 
+while dealing with 2d arrays consider if(arr.length>0) case. i.e check if 2D array is empty...
