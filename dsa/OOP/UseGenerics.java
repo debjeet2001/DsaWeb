@@ -8,7 +8,7 @@ public class UseGenerics {
         System.out.println(g.gettersfirst());
         System.out.println(g.getterssecond());
 
-        generics<String> h = new generics<String>("debjeet","Chakraborty");
+        generics<String> h = new generics<String>("debjeet","Chakraborty");// Correct way of syntax.
         System.out.println(h.gettersfirst());
         System.out.println(h.getterssecond());
 
