@@ -1,7 +1,7 @@
-public class node{
-    int data;
-    node next;
-    node(int data){
+class Node<T>{
+    T data;
+    Node<T> next;
+    Node(T data){
         this.data = data;
     }
 }
