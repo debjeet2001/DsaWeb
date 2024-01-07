@@ -40,4 +40,10 @@ public class StackUsingArray {
         if(pointer==0)return true;
         else return false;
     }
+
+    public void printStack(){
+        for(int i = 0;i<pointer;i++){
+            System.out.println(data[i]);
+        }
+    }
 }

@@ -18,6 +18,7 @@ public class StackUse {
         stack.pop();
         stack.pop();
         System.out.println(stack.size());
+        stack.printStack();
 
 
     }
